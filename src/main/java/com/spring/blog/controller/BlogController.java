@@ -34,6 +34,13 @@ public class BlogController {
         return mv;
     }
 
+
+    @RequestMapping(value="/hello", method=RequestMethod.GET)
+    public ModelAndView getHello(){
+        ModelAndView mv = new ModelAndView("hello");
+        return mv;
+    }
+
     @RequestMapping(value="/posts/{id}", method=RequestMethod.GET)
     public ModelAndView getPostDetails(@PathVariable("id") long id){
         ModelAndView mv = new ModelAndView("postDetails");
